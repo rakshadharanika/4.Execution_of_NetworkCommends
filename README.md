@@ -27,7 +27,7 @@ This commands includes
 <BR>
 ## PROGRAM
 ## CLIENT:
-```py
+```
 import socket
 from pythonping import ping
 s=socket.socket()
