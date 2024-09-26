@@ -26,8 +26,8 @@ This commands includes
 • Other IP Commands e.g. show ip route etc.
 <BR>
 ## PROGRAM
-## CLIENT:
-```
+## CLIENT.PY:
+~~~
 import socket
 from pythonping import ping
 s=socket.socket()
@@ -40,9 +40,10 @@ while True:
   c.send(str(ping(hostname, verbose=False)).encode())
  except KeyError:
   c.send("Not Found".encode())
-```
-## SERVER:
-```py
+
+~~~
+## SERVER.PY:
+~~~
 import socket
 s=socket.socket()
 s.connect(('localhost',8000))
@@ -50,13 +51,14 @@ while True:
  ip=input("Enter the website you want to ping ")
  s.send(ip.encode())
  print(s.recv(1024).decode())
-```
+~~~
+
 ## Output
 ## PING COMMAND:
-## CLIENT:
+## CLIENT.PY:
 ![image](https://github.com/user-attachments/assets/3abf384e-71bd-49be-b359-f299f70c0d99)
 
-## SERVER:
+## SERVER.PY:
 ![image](https://github.com/user-attachments/assets/003e9c10-d811-4944-9c46-75c54003b2b1)
 
 ## TRACEROUTE COMMMAND
@@ -64,3 +66,4 @@ while True:
 
 ## Result
 Thus Execution of Network commands Performed 
+
